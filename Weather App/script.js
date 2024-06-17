@@ -60,7 +60,12 @@ function rada(city) {
 let searchGlass = document.getElementsByClassName('search-glass')[0];
 searchGlass.addEventListener('click',(event)=>{
     let searchCity = document.getElementById('search-city')
-    rada(searchCity.value)
+    if(searchCity.value === ""){
+
+    }
+    else{
+        rada(searchCity.value)
+    }
 })
 
 function speakWeather(weather, city) {
