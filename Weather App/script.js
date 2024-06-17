@@ -63,6 +63,13 @@ searchGlass.addEventListener('click',(event)=>{
     rada(searchCity.value)
 })
 
+function speakWeather(weather, city) {
+    const speech = new SpeechSynthesisUtterance();
+    speech.lang = 'en-US';
+    speech.text = `The weather in ${city} is as follows. The temperature is ${weather.temp} degrees Celsius, feels like ${weather.feels_like} degrees, with a humidity of ${weather.humidity} percent and wind speed of ${weather.wind_speed} metre per second and wind degree of ${weather.wind_degrees} .`;
+    window.speechSynthesis.speak(speech);
+}
+
 rada("Mumbai");
 
 
